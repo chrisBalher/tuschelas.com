@@ -1,0 +1,55 @@
+.row{
+    
+    @mixin clearfix;
+    &__b-margin-until-medium{
+        margin-bottom: 1rem;
+    }
+    &--t-padding{
+        margin-top: 100px;
+    }
+    @mixin atMedium {
+        &--gutters{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        &--gutters-small>div{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &--gutters-large{
+            padding-right: 100px;
+        }
+        &__b-margin-until-medium{
+            margin-bottom: 0;
+        }
+        &__medium-4{   
+            float: left;
+            width: 33%;
+        }
+        &__medium-8{
+            float: left;
+            width: 65%;
+        }        
+        &__medium-6{
+            float: right;
+            width: 45%;
+            margin-left: 40px;
+        }
+    }
+    @mixin atLarge {
+        &__large-4{   
+            float: left;
+            width: 33%;
+        }
+    }
+    /*Reglas para igual altura*/
+    &--equal-height-at-large{
+        @mixin atLarge {
+            display: flex;
+        }
+        & > div{
+            float: none;
+            display: flex;
+        }        
+    }
+}

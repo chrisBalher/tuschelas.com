@@ -1,0 +1,33 @@
+.wrapper{
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 18px;
+    &--no-padding-until-large{
+        padding-left: 0px;
+        padding-right: 0px;
+        @mixin atLarge {
+        padding-right: 18px;
+        padding-left: 18px;
+        }
+    }
+    
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    &--medium{
+        max-width: 976px;
+    }
+    &--narrow{
+        max-width: 470px;
+    }
+    &--b-margin{
+        margin-bottom: 1rem;
+        @mixin atSmall {
+            margin-bottom: 3.8rem;
+        }
+    }
+    .wrapper{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
