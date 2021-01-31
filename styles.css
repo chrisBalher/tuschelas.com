@@ -241,40 +241,46 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     .table th{
         font: bold;
         font-size: 1.5rem;
+        max-height: 50px;
+        padding: 0.5rem 0 0.5rem 0;
     }
     .table__row{
-        max-height: 50px;
         max-width: 100%;
-
     }
     .table__row__logo{
-        width: 16%;
+        width: 20%;
+        float: left;
     }
     .table__row__cant{
         width: 25%;
-        
+        float: left;
+        padding: 1.5rem 0 0rem 0;
+    }
+
+    .table__row__unPrice{
+        width: 25%;
+        font-size: 1.5rem;     
+        float: left;
+        padding: 1.5rem 0 0rem 0;
+    }
+    .table__row__total{
+        width: 20%;
+        font-size: 1.5rem;
+        float: left;
+        padding: 1.5rem 0 0rem 0;
     }
     .table__row__cant input{
         max-width: 80px;
         height: 30px;
         font-size: 1.5rem;
     }
-    .table__row__unPrice{
-        width: 20%;
-        font-size: 1.5rem;     
-    }
     .table__row__unPrice input{
         height: 30px;
- 
-        
-    }
-    .table__row__total{
-        width: 25%;
-        font-size: 1.5rem;
     }
     .table__row__total input{
         border: none;
         pointer-events:none;
+        max-width: 60px;
     }
 }
 
@@ -566,7 +572,12 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     color: black;
     padding: 0.5rem 0;
     text-align: center;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
 }
+
+
 .site-footer__text{
     display: block;
     margin-bottom: 1rem;
@@ -628,5 +639,22 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 
-
-
+/*2da Pagina FINCOMPRA */
+.site-footer--2{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.principal--2{
+    padding-top: 73px;
+}
+.principal-text{
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
