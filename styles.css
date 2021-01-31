@@ -1,0 +1,17 @@
+@import 'normalize.css';
+@import './assets/styles/base/_variables.css';
+@import './assets/styles/base/_global.css';
+@import './assets/styles/modules/_site-header.css';
+@import './assets/styles/modules/_calculadora.css';
+@import './assets/styles/modules/_table.css';
+@import './assets/styles/modules/_principal.css';
+@import './assets/styles/modules/_row.css';
+@import './assets/styles/modules/_wrapper.css';
+@import './assets/styles/modules/_page-section.css';
+@import './assets/styles/modules/_headline.css';
+@import './assets/styles/modules/_generic-content-container.css';
+@import './assets/styles/modules/_section-title.css';
+@import './assets/styles/modules/_feature-item.css';
+@import './assets/styles/modules/_site-footer.css';
+@import './assets/styles/modules/_principal.css';
+@import './assets/styles/modules/_social-icons.css';

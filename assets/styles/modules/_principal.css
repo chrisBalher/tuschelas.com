@@ -1,0 +1,14 @@
+.principal{
+    display: flex;
+    flex-direction: row;
+    padding-top: 73px;
+}
+.principal__publicidad{
+    padding-top: 4rem;
+}
+.principal__publicidad__img{
+    width: 650px;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+}

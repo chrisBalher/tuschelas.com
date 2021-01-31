@@ -1,0 +1,22 @@
+.principal__calc{
+    padding-top: 4rem;
+    width: 55%;
+    
+  }
+.principal__calc__display{
+background-color: #fffefe;
+height: 600px;
+width: 600px;
+margin: auto;
+border-radius: 20px;
+box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5); 
+}
+.principal__calc__item{
+    img{
+        max-width: 50px;
+    }
+}
+
+
+  
+  
