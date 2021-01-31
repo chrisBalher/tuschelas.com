@@ -1,19 +1,19 @@
 @import 'normalize.css';
 
-@import './assets/styles/base/_variables.css';
-@import './assets/styles/base/_global.css';
+@import './_global.css';
+@import './_variables.css';
 @import './_site-header.css';
-@import './assets/styles/modules/_site-header.css';
-@import './assets/styles/modules/_calculadora.css';
-@import './assets/styles/modules/_table.css';
-@import './assets/styles/modules/_principal.css';
-@import './assets/styles/modules/_row.css';
-@import './assets/styles/modules/_wrapper.css';
-@import './assets/styles/modules/_page-section.css';
-@import './assets/styles/modules/_headline.css';
-@import './assets/styles/modules/_generic-content-container.css';
-@import './assets/styles/modules/_section-title.css';
-@import './assets/styles/modules/_feature-item.css';
-@import './assets/styles/modules/_site-footer.css';
-@import './assets/styles/modules/_principal.css';
-@import './assets/styles/modules/_social-icons.css';
+@import './_calculadora.css';
+@import './_table.css';
+@import './_principal.css';
+@import './_row.css';
+@import './_wrapper.css';
+@import './_page-section.css';
+@import './_headline.css';
+@import './_generic-content-container.css';
+@import './_section-title.css';
+@import './_feature-item.css';
+@import './_site-footer.css';
+@import './_principal.css';
+@import './_social-icons.css';
+
