@@ -1,4 +1,4 @@
-@import 'normalize.css';
+@import './node_modules/normalize.css/normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=PT+Serif:wght@400;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
 
 /* VARIABLES */
@@ -17,7 +17,6 @@ body{
     font-weight: 300;
     color: #333;
     background-color: var(--fondo);
-    margin: 0;
 }
 img{
     max-width: 100%;
