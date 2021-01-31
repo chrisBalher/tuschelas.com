@@ -1,10 +1,12 @@
 @import 'normalize.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=PT+Serif:wght@400;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
 
 /* VARIABLES */
-$mainBlue: #000000;
-$mainOrange: #d59541;
-$pastel:  rgba(230, 253, 247, 0.9);
+:root {
+    --header-footer : white;
+    --resaltar: #d59541;
+    --fondo:  rgba(230, 253, 247, 0.9);
+}
 
 /* GLOBAL */
 html{
@@ -14,7 +16,7 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     color: #333;
-    background-color: rgba(230, 253, 247, 0.9);
+    background-color: var(--fondo);
     margin: 0;
 }
 img{
@@ -25,8 +27,65 @@ img{
     box-sizing: border-box; /*para que el browser calcule el padding dentro del ancho de cada div y no se lo agregue despues*/
 }
 a{
-    color: $mainOrange;
+    color: var(--resaltar);
 }
+
+/* PRIMARY NAV */
+.primary-nav{
+    padding-top: 0.5rem;
+}
+.primary-nav--pull-right{
+    float: none;
+    text-align: center;
+}
+.primary-nav ul {
+    margin: 0;
+    padding: 0;
+}
+.primary-nav ul::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.primary-nav li {
+    list-style: none;
+    display: inline-block;
+    float: none;
+    padding-right: 0.4rem;
+}
+.primary-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    
+    padding: 0.5rem 0.2rem;
+    font-size: 0.8rem;
+    background-color: rgba($mainBlue, .5);
+}
+@media (min-width: 800px) {
+    .primary-nav{
+        padding-top: 0;
+    }
+    .primary-nav--pull-right{
+        float: right;
+    }
+    .primary-nav li {
+        float: left;
+        display: block;
+        padding-right: 1.2rem;
+    }
+    .primary-nav a {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+        background-color: transparent;
+    }
+    .primary-nav a .is-current-link{
+        color: #fabb69;
+    }
+}
+
 
 /* SITE-HEADER */
 .site-header{
@@ -34,9 +93,6 @@ a{
     z-index: 2;
     width: 100%;
     padding: 1rem 0 1rem 0;
-}
-.site-header--is-expanded{
-    background-color: rgba( $mainBlue , 0.6);
 }
 
 .site-header__menu-icon{
@@ -93,6 +149,7 @@ a{
     padding-top:80px;
     text-align: center;
 }
+
 .site-header__menu-content .site-header__menu-content--is-visible{
     opacity: 1;//display: block;
     z-index: 1;
@@ -112,7 +169,7 @@ a{
 
 @media(min-width: 800px) {
     .site-header{
-        background-color: white;  
+        background-color: var(--header-footer);  
         position: fixed;  
     }
     .site-header__logo{
@@ -127,11 +184,24 @@ a{
             transform: scale(1);
             padding-top:0;
     }
+    
 }
 
 @media(min-width: 1000px) {
     .site-header__menu-icon{
     display: none;
+    }
+    .site-header__menu-content__social-links{
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: center;
+        
+    }
+    .site-header__menu-content__social-links a{
+        font-size: 1.5rem;
+        padding: 0.5rem 0.8rem;
     }
 }
 
@@ -159,10 +229,6 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
   
   
-
-
-
-@import '_table.css';
 /* TABLE */
 
 @media(min-width: 1000px){
@@ -213,7 +279,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     }
 }
 
-@import '_principal.css';
+
 /* PRINCIPAL */
 .principal{
     display: flex;
@@ -230,7 +296,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
 
-@import '_row.css';
+
 /* ROW */
 .row__b-margin-until-medium{
     margin-bottom: 1rem;
@@ -290,7 +356,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
         display: flex;
     }        
 }
-@import '_wrapper.css';
+
 /* WRAPPER */
 .wrapper{
     overflow: hidden;
@@ -333,7 +399,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     }
 }
 
-@import '_page-section.css';
+
 /* PAGE SECTION */
 .page-section{
     padding: 1.5rem 0;    
@@ -343,7 +409,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     padding-bottom: 0;
 }
 .page-section--blue{
-    background-color: $pastel;
+    background-color: --fondo;
     color: black;
 }
 
@@ -362,7 +428,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     }
 }
 
-@import '_headline.css';
+
 /* HEADLINE */
 .headline{
     font-weight: 300;
@@ -372,7 +438,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 .headline--orange {
-    color: $mainOrange;
+    color: var(--resaltar);
 }
 .headline--small{
     font-size: 1.2rem;
@@ -409,7 +475,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 
-@import '_generic-content-container.css';
+
 /* GENERIC CONTENT */
 .generic-content-container{
     p{
@@ -424,7 +490,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 
-@import '_section-title.css';
+
 /* SECTION TITLE */
 .section-title{
     font-size: 2.5rem;
@@ -444,9 +510,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     margin-right: auto;
     margin-bottom: 0.5rem;
 }
-.section-title--blue{
-    color: $mainBlue;
-}
+
 @media(min-width:530px){
     .section-title{
         font-size: 3.8rem;
@@ -461,7 +525,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     }
 }
 
-@import '_feature-item.css';
+
 /* FEATURE ITEM */
 .feature-item{
     position: relative;
@@ -496,7 +560,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
 
 
-@import '_site-footer.css';
+
 /*  SITE FOOTER */
 .site-footer{
     background-color: white;
@@ -535,13 +599,13 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
 
 /* SOCIAL ICONS  */
-@import '_social-icons.css';
+
 
 .social-icons{
     text-align: center;
 }
 .social-icons__icon{
-    background-color: $mainOrange;
+    background-color: var(--resaltar);
     display: inline-block;
     width: 33%;
     height: 72px;
