@@ -211,7 +211,7 @@ a{
     padding-top: 73px;
 }
 .principal__publicidad{
-    padding-top: 2.5rem;
+    padding-top: 3rem;
     margin: 0 14% 0 0;
 }
 .principal__publicidad__img{
@@ -224,7 +224,7 @@ a{
 
 /* CALCULADORA  */
 .principal__calc{
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     width: 50%;
     min-width: 450px;
   }
@@ -315,18 +315,6 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
 
 /* ROW */
-.row__b-margin-until-medium{
-    margin-bottom: 1rem;
-    content: "";
-    clear: both;
-    display: table;
-}
-.row--t-padding{
-    margin-top: 100px;
-    content: "";
-    clear: both;
-    display: table;
-}
 
 @media(min-width: 800px) {
     .row--gutters{
@@ -346,6 +334,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     .row__medium-4{   
         float: left;
         width: 33%;
+        padding: 2rem 2rem 0 2rem;
     }
     .row__medium-8{
         float: left;
@@ -588,20 +577,20 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
 
 .site-footer__text{
-    display: block;
+    display: inline-block;
     margin-bottom: 1rem;
     font-weight: 200;
+    width: 100%;
 }
 @media(min-width: 800px){
     .site-footer__text{
-        display: inline;
         margin-bottom: 0;
         margin-right: 1rem;
     }
 }
-
-
-
+.site-footer__row{
+    justify-content: space-between;    
+}
 
 /* SOCIAL ICONS  */
 
