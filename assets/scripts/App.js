@@ -2,6 +2,15 @@
 
 import TableCalc from "./modules/productTable.js";
 
-let tableCalc = new TableCalc;
+/* PRECIOS POR CAJA*/
+// CRISTAL - PILSE - CUZQUENA - AGUA
+const arrPrecios= [50,40,60,45];
 
-//tableCalc.toggleMenu();
+
+for(let i=0; i<4;i++){
+    document.getElementById(`unPrice${i}`).value = arrPrecios[i];
+}
+
+let tableCalc = new TableCalc();
+
+

@@ -275,12 +275,18 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
         font-size: 1.5rem;
     }
     .table__row__unPrice input{
+        max-width: 80px;
         height: 30px;
+        font-size: 1.5rem;
+        border: none;
+        pointer-events: none;
     }
     .table__row__total input{
         border: none;
-        pointer-events:none;
-        max-width: 60px;
+        pointer-events: none;
+        max-width: 80px;
+        height: 30px;
+        font-size: 1.5rem;
     }
 }
 
