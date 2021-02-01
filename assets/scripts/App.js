@@ -3,7 +3,7 @@
 import TableCalc from "./modules/productTable.js";
 
 /* PRECIOS POR CAJA*/
-// CRISTAL - PILSE - CUZQUENA - AGUA - X - Y
+// CRISTAL - PILSEN - CUZQUENA - AGUA - X - Y
 const arrPrecios= [50,40,60,45, 35, 25];
 
 
@@ -16,6 +16,7 @@ document.getElementById('total2').value = 0
 document.getElementById('total3').value = 0
 document.getElementById('total4').value = 0
 document.getElementById('total5').value = 0
+document.getElementById('totalTotal').value =0
 
 let tableCalc = new TableCalc();
 
