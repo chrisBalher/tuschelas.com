@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="finCompra">
     <header class="site-header">
         <div class="wrapper">
           <div class="site-header__logo">
@@ -31,17 +31,26 @@
           </div>
         </div>
       </header>
-        <div class="principal--2">
-            <h1 class="principal-text">Realice el deposito y envie el voucher al siguiente numero de cuenta:</h1>
-            <p>Números de cuenta: BCP</p>
-        </div>
-        
-        <footer class="site-footer--2">
-            <div class="wrapper">
-              <p><span class="site-footer__text"> Copyright &copy; 2020 ABCplastilina. All rights reserved.</span></p>
-            </div>
-        </footer>    
+      <div class="principal--2">
+        <h1>RESUMEN DEL PEDIDO</h1>
+          <table id="tablaResumen">
+            <!-- Aqui se inserta el HTML de Fin compra -->
+            <tr class="tablaResumen__row">
+              <th class="tablaResumen__row__product" ></th>
+              <th class="tablaResumen__row__cant" >TOTAL(S/.)</th>
+              <th id="totalTotalResumen" class="tablaResumen__row__total" ></th>
+          </tr>
+          </table>  
+        <h2 class="principal-text">Realice el deposito y envie el voucher al siguiente numero de cuenta:</h2>
+          <p>Números de cuenta: BCP</p>
+      </div>
+      
+      <footer class="site-footer--2">
+          <div class="wrapper">
+            <p><span class="site-footer__text"> Copyright &copy; 2020 ABCplastilina. All rights reserved.</span></p>
+          </div>
+      </footer>    
     
-    
+      <script type="module" src="./assets/scripts/modules/finCompra.js" ></script>
 </body>
 </html>
