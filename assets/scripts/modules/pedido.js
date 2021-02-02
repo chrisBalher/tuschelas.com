@@ -5,19 +5,25 @@ class Pedido{
         this.arrCant = []
         this.arrPriceCaja = []
         this.arrTotal = []
+        this.arrTableRow =[]
         this.totalTotal = document.getElementById('totalTotal') 
-        this.realizarPedido = document.getElementById("realizarPedido");
-        for(let i = 0; i<6; i++){
+        this.realizarPedido = document.getElementById("realizarPedido")
+        this.cargarMas = document.getElementById("cargarMas")
+
+        for(let i = 0; i<11; i++){
             this.arrProduct[i] = document.getElementById(`productImage${i}`).alt;
             this.arrCant[i] = document.getElementById(`cant${i}`);
             this.arrPriceCaja[i]= document.getElementById(`unPrice${i}`);
             this.arrTotal[i]= document.getElementById(`total${i}`);
+            this.arrTableRow[i] = document.getElementById(`tableRow-${i}`);
         }
+        console.log(this.arrTableRow)
         this.tablaResumen = document.getElementById('tablaResumen')
         this.events()
     }
     events(){
         this.realizarPedido.addEventListener('click', ()=>this.saveLocal() )
+        this.cargarMas.addEventListener('click', ()=>this.cargarMasProductos() )
     }
     //METODOS
     saveLocal(){ //Crea el objeto: pedido { producto1 : {precio, cant, total}, producto 2: ...}
@@ -32,6 +38,11 @@ class Pedido{
         // Setea Pedido in localStorage
         localStorage.setItem('productosPedidos', JSON.stringify(this.pedido) )
         console.log("guardado",this.pedido)
+    }
+    cargarMasProductos(){
+        for (let i = 6; i < 11; i++) {
+            this.arrTableRow[i].removeAttribute("hidden")
+        }
     }
 
 }export default Pedido

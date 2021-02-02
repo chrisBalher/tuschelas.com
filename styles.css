@@ -234,7 +234,7 @@ background-color: #fffefe;
 height: auto;
 min-width: 55%;
 max-width: 500px;
-margin: 0 2% 0 29%;
+margin: 0 2% 0 28%;
 box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5); 
 }
 .principal__calc__item{
@@ -245,6 +245,9 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 
 
 /* TABLE */
+.table{
+    transition: all 0.4s ease-out;
+}
 .table__cargarMas{
     text-align: left;
 }
@@ -266,6 +269,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
         display: grid;
         box-sizing: border-box;
         text-align: center;
+        margin: 0 0 0 1rem;
     }
     .table th{
         font: bold;
@@ -677,7 +681,7 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
 }
 .tablaResumen--total{
     font-size: 1.5rem;
-    padding: 1rem 2rem 0 2rem;
+    padding: 0.3rem 2rem 0 2rem;
 }
 
 .principal-text{

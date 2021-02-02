@@ -4,7 +4,7 @@ import Pedido from "./modules/pedido.js";
 
 /* PRECIOS POR CAJA*/
 // CRISTAL - PILSEN - CUZQUENA - AGUA - X - Y
-const arrPrecios= [50,40,60,45, 35, 25];
+const arrPrecios= [50, 40, 60, 45, 35, 25, 55, 60, 30, 20, 33];
 for(let i=0; i<arrPrecios.length;i++){
     document.getElementById(`unPrice${i}`).value = arrPrecios[i];
 }
