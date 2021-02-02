@@ -28,7 +28,7 @@ function insertarPedidosHTML(){
             tablaResumen.insertAdjacentHTML("afterbegin",`
             <tr class="tablaResumen__row">
                 <td class="tablaResumen__row__product" >${arrProductRec[i]}</td>
-                <td class="tablaResumen__row__cant" >${arrCantRec[i]} cajas</td>
+                <td class="tablaResumen__row__cant" >${arrCantRec[i]} caja(s)</td>
                 <td class="tablaResumen__row__total" >${arrTotalRec[i]} soles</td>
             </tr>
         `)

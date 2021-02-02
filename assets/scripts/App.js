@@ -10,7 +10,6 @@ for(let i=0; i<arrPrecios.length;i++){
 }
 
 
-
 let tableCalc = new TableCalc();
 let pedido = new Pedido();
 
