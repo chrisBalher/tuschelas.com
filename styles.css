@@ -263,6 +263,17 @@ box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
     height: 40px;
     margin-bottom: 1rem;
 }
+.table__row__oculto{
+    display: none;
+    opacity: 0;
+    transition: display 0s, opacity 0.5s linear;
+    
+}
+.table__row__visible{
+    display:table-row;
+    opacity: 1;
+}
+
 @media(min-width: 1000px){
     .table{
         min-height: 550px;    

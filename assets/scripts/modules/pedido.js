@@ -41,7 +41,7 @@ class Pedido{
     }
     cargarMasProductos(){
         for (let i = 6; i < 11; i++) {
-            this.arrTableRow[i].removeAttribute("hidden")
+            this.arrTableRow[i].classList.replace("table__row__oculto","table__row__visible") 
         }
     }
 
