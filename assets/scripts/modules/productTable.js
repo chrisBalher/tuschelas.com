@@ -9,10 +9,10 @@ constructor() {
         this.arrCant[i] = document.getElementById(`cant${i}`);
         this.arrPriceUn[i]= document.getElementById(`unPrice${i}`);
         this.arrTotal[i]= document.getElementById(`total${i}`);
-        this.arrTotal[i].value=0; //inicializar total values en 0
+        this.arrTotal[i].value=0.0.toFixed(1); //inicializar total values en 0
     }
     this.totalTotal = document.getElementById('totalTotal')
-    this.totalTotal.value = 0 //inicializar totalTotal en 0
+    this.totalTotal.value = 0.0.toFixed(1) //inicializar totalTotal en 0
     this.realizarPedido = document.getElementById('realizarPedido')
     this.pedidoFallido = document.getElementById('pedidoFallido')
     this.events();
@@ -30,10 +30,12 @@ events(){
 //METODOS
 calcularTotal(n) {
     //calc parcial totals for every row and the totalTotal
-    this.totalTotal.value = 0;
+    this.totalTotal.value = 0.0.toFixed(1);
     for (let i = 0; i < 12; i++) {
-        this.arrTotal[i].value = this.arrCant[i].value*this.arrPriceUn[i].value;
-        this.totalTotal.value = parseFloat(this.totalTotal.value) +  parseFloat(this.arrTotal[i].value) ;
+        let preTotal =this.arrCant[i].value*this.arrPriceUn[i].value;
+        this.arrTotal[i].value = preTotal.toFixed(1)
+        let preTotalTotal = parseFloat(this.totalTotal.value) +  parseFloat(this.arrTotal[i].value) ;
+        this.totalTotal.value = preTotalTotal.toFixed(1);
     }
 }
 limpiarDatos(){

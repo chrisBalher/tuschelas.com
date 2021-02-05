@@ -51,7 +51,6 @@ class Pedido{
                 this.arrTableRow[i].classList.replace("table__row__oculto","table__row__visible") 
             }   
         }else{
-            
             this.cargarMas.innerHTML = "Cargar más productos"
             for (let i = 6; i < 12; i++) {
                 this.arrTableRow[i].classList.replace("table__row__visible","table__row__oculto") 

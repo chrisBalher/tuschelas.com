@@ -25,16 +25,16 @@ function getPedidoLocal(){
 function insertarPedidosHTML(){
     for (let i = 0; i < arrProductRec.length; i++) {
         if(arrCantRec[i]>0){
-            tablaResumen.insertAdjacentHTML("afterbegin",`
+            tablaResumen.insertAdjacentHTML("beforeend",`
             <tr class="tablaResumen__row">
                 <td class="tablaResumen__row__product" >${arrProductRec[i]}</td>
                 <td class="tablaResumen__row__cant" >${arrCantRec[i]} caja(s)</td>
-                <td class="tablaResumen__row__total" >${arrTotalRec[i]} soles</td>
+                <td class="tablaResumen__row__total" >S/ ${arrTotalRec[i]}</td>
             </tr>
         `)
         }
     }
-    totalTotalResumen.innerText = totalTotalRec+" soles";
+    totalTotalResumen.innerText ="S/ "+ totalTotalRec+ " Monto a depositar";
 }
 
 getPedidoLocal();
