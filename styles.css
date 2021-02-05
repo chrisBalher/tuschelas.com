@@ -245,6 +245,9 @@ margin: 0 0 0 15%;
     object-fit: cover;
     padding: 10px;
 }
+.principal__publicidad__img:hover{
+    cursor: pointer;
+}
 
 
 /* TABLE */
@@ -269,6 +272,11 @@ margin: 0 0 0 15%;
     height: 40px;
     margin-bottom: 1rem;
     margin-left: 2.5rem;
+}
+.table__row__pedidoFallido{
+    color: red;
+    font-size: 1rem;
+    font-weight: 400;
 }
 .table__row__oculto{
     display: none;
@@ -540,6 +548,7 @@ margin: 0 0 0 15%;
     text-align: center;
 }
 .section-title__res{
+    margin-top: 8rem;
     font-size: 2.2rem;
     font-weight: 300;
     text-align: left;

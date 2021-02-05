@@ -112,15 +112,24 @@
               <td class="table__row__total" ><input id="total10" type="number" placeholder="0" readonly tabindex="-1"></td>
               <td class="table__row__unPrice"><input id="unPrice10" type="number" readonly tabindex="-1"></td>
             </tr>
+            <tr id="tableRow-11" class="table__row table__row__oculto" >
+              <td class="table__row__logo"><img id="productImage11" src="./assets/images/cristal.jpg" alt="IncaKola"></td>
+              <td class="table__row__cant"><input id="cant11" type="number" placeholder="0" min="0"></td>
+              <td class="table__row__total" ><input id="total11" type="number" placeholder="0" readonly tabindex="-1"></td>
+              <td class="table__row__unPrice"><input id="unPrice11" type="number" readonly tabindex="-1"></td>
+            </tr>
             <tr class="table__row">
               <th class="table__row__cant">TOTAL</th>
               <th class="table__row__unPrice">(S/.)</th>
               <th class="table__row__total"><input id="totalTotal" type="number" placeholder="0" readonly tabindex="-1"></th>
               <th class="table__row__logo"></th>
             </tr>
-            <td id="cargarMas" ><p class="table__cargarMas"><a href="#">Cargar más productos</a></p></td>
+            <td ><p   class="table__cargarMas"><a id="cargarMas" href="#">Cargar más productos</a></p></td>
             <tr class="table__row">
-              <td><a href="./finCompra.html"><input class="table__row__button1" id="realizarPedido" value="Realizar Pedido" type="button"></a></td>
+              <td id="pedidoFallido" class="table__row__pedidoFallido" hidden><p >El pedido mínimo es de S/.100 </p></td>
+            </tr>
+            <tr class="table__row">
+              <td><input class="table__row__button1" id="realizarPedido" value="Realizar Pedido" type="button"></td>
             </tr>
             <tr>
               <td><input class="table__row__button2" id="limpiar" value="Limpiar" type="button"> </td>
@@ -133,10 +142,10 @@
       </div>
       <div class="principal__publicidad">
         <div class="principal__publicidad__1">
-            <a href="./finCompra.html"><img class="principal__publicidad__img" src="./assets/images/promocion1.jpg"></a>
+          <img id="promocion1" class="principal__publicidad__img" src="./assets/images/promocion1.jpg">
         </div>
         <div class="principal__publicidad__2">
-            <a href="./finCompra.html"><img class="principal__publicidad__img" src="./assets/images/promocion2.jpg"></a>
+          <img id="promocion2" class="principal__publicidad__img" src="./assets/images/promocion2.jpg">
         </div>
       </div>
     </div>
