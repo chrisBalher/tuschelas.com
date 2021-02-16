@@ -1,4 +1,5 @@
 /* import 'lazysizes' */
+import './modules/jquery.min.js'
 import TableCalc from "./modules/productTable.js";
 import Pedido from "./modules/pedido.js";
 
@@ -9,7 +10,5 @@ for(let i=0; i<arrPrecios.length;i++){
     document.getElementById(`unPrice${i}`).value = arrPrecios[i];
 }
 
-
 let tableCalc = new TableCalc();
 let pedido = new Pedido();
-

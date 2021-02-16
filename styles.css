@@ -1,40 +1,14 @@
-@import './normalize.css';
+@import './assets/css/normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=PT+Serif:wght@400;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+@import './assets/css/global.css';
 
-/* VARIABLES */
-:root {
-    --header-footer : white;
-    --resaltar: #d59541;
-    --fondo:  rgba(230, 253, 247, 0.9);
-}
-
-/* GLOBAL */
-html{
-    scroll-behavior: smooth;
-}
-body{
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    color: #333;
-    background-color: var(--fondo);
-}
-img{
-    max-width: 100%;
-    height: auto;
-}
-*{
-    box-sizing: border-box; /*para que el browser calcule el padding dentro del ancho de cada div y no se lo agregue despues*/
-}
-a{
-    color: var(--resaltar);
-}
 
 /* PRIMARY NAV */
 .primary-nav{
     padding-top: 0.5rem;
 }
 .primary-nav--pull-right{
-    float: none;
+    float: right;
     text-align: center;
 }
 .primary-nav ul {
@@ -50,8 +24,11 @@ a{
 .primary-nav li {
     list-style: none;
     display: inline-block;
-    float: none;
+    
     padding-right: 0.4rem;
+    float: left;
+    display: block;
+    padding-right: 1.2rem;
 }
 .primary-nav a {
     color: black;
@@ -60,23 +37,12 @@ a{
     display: block;
     
     padding: 0.5rem 0.2rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background-color: rgba($mainBlue, .5);
 }
 @media (min-width: 800px) {
-    .primary-nav{
-        padding-top: 0;
-    }
-    .primary-nav--pull-right{
-        float: right;
-    }
-    .primary-nav li {
-        float: left;
-        display: block;
-        padding-right: 1.2rem;
-    }
+
     .primary-nav a {
-        font-size: 1rem;
         padding: 0.7rem 0;
         background-color: transparent;
     }
@@ -91,8 +57,10 @@ a{
     position: absolute;
     z-index: 2;
     width: 100%;
-    padding: 1rem 0 1rem 0;
+    padding: 0.8rem 0 1rem 0;
+    height: 73px;
 }
+
 
 .site-header__menu-icon{
     width: 20px;
@@ -103,6 +71,7 @@ a{
     right: 10px;
     top: 10px;
 }
+
 .site-header__menu-icon::before{
     position: absolute;
     content: "";
@@ -165,50 +134,52 @@ a{
 .site-header__logo img{
     height: 73px;
 }
-
-@media(min-width: 800px) {
-    .site-header{
-        background-color: var(--header-footer);  
-        position: fixed;  
-    }
-    .site-header__logo{
-        //left: 14%;
-    }
-    .site-header__button-container{
-        float: right;
-    }
-    .site-header__menu-content{
-            opacity: 1;//display: block;
-            z-index: 1;
-            transform: scale(1);
-            padding-top:0;
-    }
+.site-header{
+    background-color: var(--header-footer);  
+    position: fixed;  
+}
+.site-header__menu-content{
+    opacity: 1;//display: block;
+    z-index: 1;
+    transform: scale(1);
+    padding-top:0;
+}
+.site-header__menu-content__social-links{
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
     
 }
+.site-header__menu-content__social-links a{
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+}
+@media(min-width: 800px) {
 
-@media(min-width: 1000px) {
-    .site-header__menu-icon{
-    display: none;
-    }
-    .site-header__menu-content__social-links{
-        display: flex !important;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        justify-content: center;
-        
+    .site-header__button-container{
+        float: right;
     }
     .site-header__menu-content__social-links a{
         font-size: 1.5rem;
         padding: 0.5rem 0.8rem;
     }
+    
 }
 
 /* PRINCIPAL */
 .principal{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 73px;
+}
+@media(min-width: 1000px){
+    .principal{
+        display: flex;
+        flex-direction: row;
+        padding-top: 73px;
+    }   
 }
 
 /* CALCULADORA  */
@@ -225,8 +196,18 @@ background-color: #fffefe;
 height: auto;
 min-width: 55%;
 max-width: 580px;
-margin: 0 0 0 15%;
-//box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5); 
+margin: 0 5% 0 5%;
+
+}
+@media (min-width: 800px){
+    .principal__calc__display{
+        background-color: #fffefe;
+        height: auto;
+        min-width: 55%;
+        max-width: 580px;
+        margin: 0 0 0 15%;
+        
+        }
 }
 .principal__calc__item{
     img{
@@ -254,6 +235,12 @@ margin: 0 0 0 15%;
 .table{
     transition: all 0.4s ease-out;
 }
+.table{
+    min-height: 550px;    
+    display: grid;
+    box-sizing: border-box;
+    text-align: center;
+}
 .table__cargarMas{
     margin-top: 0;
     font-size: 1.2rem;
@@ -279,98 +266,86 @@ margin: 0 0 0 15%;
 }
 .table__row__oculto{
     display: none;
-    opacity: 0;
-    transition: display 0s, opacity 0.5s linear;
+}
+
+.table{
+    min-height: 550px;    
+    margin: 0 1rem 0 1rem;
+}
+.table th{
+    font: bold;
+    font-size: 1.5rem;
+    max-height: 50px;
+    padding: 1rem 0 0 0;
+}
+.table__row{
+    margin-top: 1rem;
+    max-width: 100%;
+}
+.table__row__logo{
+    width: 25%;
+    float: left;
+}
+.table__row__cant{
+    width: 25%;
+    float: left;
+    padding: 1.5rem 0 0rem 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.table__row__unPrice{
+    width: 30%;  
+    float: left;    
+    padding: 1.5rem 0 0rem 0;
+    font-size: 1.3rem; 
+    font-weight: 400;  
+}
+.table__row__total{
+    width: 17%; 
+    float: left;     
+    padding: 1.5rem 0 0rem 0;
+    font-size: 1.3rem; 
+    font-weight: 400;
+    margin-right: 0.5rem;
+
+}
+.table__row__total input{
+    border: none;
+    pointer-events: none;
+    max-width: 90px;
+    height: 30px;
+    font-size: 1.5rem;
+    text-align: right;
     
 }
-.table__row__visible{
-    display:table-row;
-    opacity: 1;
+.table__row__cant input{
+    max-width: 80px;
+    height: 30px;
+    font-size: 1.5rem;
+    text-align: right;
+}
+.table__row__unPrice input{
+    max-width: 55px;
+    height: 30px;
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    pointer-events: none;
+}
+.table__row__unPrice input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.table__row__unPrice input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+} 
+/* Firefox */
+.table__row__unPrice input[type=number] {
+    -moz-appearance: textfield;
 }
 
-@media(min-width: 1000px){
-    .table{
-        min-height: 550px;    
-        display: grid;
-        box-sizing: border-box;
-        text-align: center;
-        margin: 0 1rem 0 1rem;
-    }
-    .table th{
-        font: bold;
-        font-size: 1.5rem;
-        max-height: 50px;
-        padding: 1rem 0 0 0;
-    }
-    .table__row{
-        margin-top: 1rem;
-        max-width: 100%;
-    }
-    .table__row__logo{
-        width: 25%;
-        float: left;
-    }
-    .table__row__cant{
-        width: 25%;
-        float: left;
-        padding: 1.5rem 0 0rem 0;
-        font-size: 1.3rem;
-        font-weight: 400;
-    }
-
-    .table__row__unPrice{
-        width: 30%;  
-        float: left;    
-        padding: 1.5rem 0 0rem 0;
-        font-size: 1.3rem; 
-        font-weight: 400;  
-    }
-    .table__row__total{
-        width: 17%; 
-        float: left;     
-        padding: 1.5rem 0 0rem 0;
-        font-size: 1.3rem; 
-        font-weight: 400;
-        margin-right: 0.5rem;
-
-    }
-    .table__row__total input{
-        border: none;
-        pointer-events: none;
-        max-width: 90px;
-        height: 30px;
-        font-size: 1.5rem;
-        text-align: right;
-        
-    }
-    .table__row__cant input{
-        max-width: 80px;
-        height: 30px;
-        font-size: 1.5rem;
-        text-align: right;
-    }
-    .table__row__unPrice input{
-        max-width: 55px;
-        height: 30px;
-        font-size: 1.5rem;
-        text-align: right;
-        border: none;
-        pointer-events: none;
-    }
-    .table__row__unPrice input::-webkit-outer-spin-button{
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    .table__row__unPrice input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-        margin: 0;
-    } 
-    /* Firefox */
-    .table__row__unPrice input[type=number] {
-      -moz-appearance: textfield;
-    }
-
-}
 .cobertura-descrip__headline{
     padding-left: 1rem;
     font-size: 1.5rem;
@@ -481,7 +456,7 @@ margin: 0 0 0 15%;
 
 /* PAGE SECTION */
 .page-section{
-    padding: 1.5rem 0;    
+    padding: 3.5rem 0;
     min-height: 100vh;
 }
 
@@ -491,12 +466,6 @@ margin: 0 0 0 15%;
 .page-section--blue{
     background-color: --fondo;
     color: black;
-}
-
-@media(min-width: 800px) {
-    .page-section{
-        padding: 3.5rem 0;
-    }
 }
 
 @media(min-width: 1000px){

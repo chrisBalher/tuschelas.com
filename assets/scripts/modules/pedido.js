@@ -19,8 +19,8 @@ class Pedido{
             this.arrTotal[i]= document.getElementById(`total${i}`);
             this.arrTableRow[i] = document.getElementById(`tableRow-${i}`);
         }
-        console.log(this.arrTableRow)
-        this.tablaResumen = document.getElementById('tablaResumen')
+        //console.log(this.arrTableRow)
+        //this.tablaResumen = document.getElementById('tablaResumen')
         this.events()
     }
     events(){
@@ -44,18 +44,10 @@ class Pedido{
         console.log("guardado",this.pedido)
     }
     cargarMasProductos(){
-        if (this.cargarMas.innerHTML = "Cargar más productos" ) {
-            
-            this.cargarMas.innerHTML = "Mostrar menos productos"
-            for (let i = 6; i < 12; i++) {
-                this.arrTableRow[i].classList.replace("table__row__oculto","table__row__visible") 
-            }   
-        }else{
-            this.cargarMas.innerHTML = "Cargar más productos"
-            for (let i = 6; i < 12; i++) {
-                this.arrTableRow[i].classList.replace("table__row__visible","table__row__oculto") 
-            }   
-        }
+        for (let i = 6; i < 12; i++) {
+            this.arrTableRow[i].classList.toggle("table__row__oculto")
+        }   
+        this.cargarMas.innerHTML == "Cargar más productos"? this.cargarMas.innerHTML = "Mostrar menos productos": this.cargarMas.innerHTML = "Cargar más productos";
     }
     pedirPromocion1(){
         this.pedido[`${this.arrProduct[1]}`] = {
