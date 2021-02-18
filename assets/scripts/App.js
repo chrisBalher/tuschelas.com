@@ -1,5 +1,4 @@
 /* import 'lazysizes' */
-import './modules/jquery.min.js'
 import TableCalc from "./modules/productTable.js";
 import Pedido from "./modules/pedido.js";
 
