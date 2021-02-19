@@ -1,6 +1,7 @@
 /* import 'lazysizes' */
 import TableCalc from "./modules/productTable.js";
 import Pedido from "./modules/pedido.js";
+import MenuButton from "./modules/menuButton.js";
 
 /* PRECIOS POR CAJA*/
 // CRISTAL - PILSEN - CUZQUENA - AGUA - X - Y
@@ -11,3 +12,4 @@ for(let i=0; i<arrPrecios.length;i++){
 
 let tableCalc = new TableCalc();
 let pedido = new Pedido();
+let menuButton = new MenuButton();
