@@ -368,10 +368,17 @@ margin: 0;
 .table__row__total input{
     border: none;
     pointer-events: none;
-    max-width: 60px;
+    max-width: 52px;
     height: 30px;
     font-size: 1rem;
     text-align: right;
+}
+@media (min-width: 800px){
+    .table__row__total input{
+
+        max-width: 60px;
+
+    }
 }
 .table__row__cant input{
     max-width: 50px;
