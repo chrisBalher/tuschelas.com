@@ -264,7 +264,6 @@ margin: 0;
     .principal__publicidad{
         width: 80%;
     }
-    
 }
 @media (min-width: 1000px){
     .principal__publicidad{
@@ -328,16 +327,14 @@ margin: 0;
     max-height: 50px;
     padding: 1rem 0 0 0;
 }
+
 @media (min-width: 800px){
     .table th{
         
         font-size: 1.5rem;
     }
 }
-.table__row{
-    margin-top: 1rem;
-    max-width: 100%;
-}
+
 .table__row__logo{
     width: 25%;
     float: left;
@@ -351,13 +348,15 @@ margin: 0;
     font-weight: 400;
 }
 
+
 .table__row__unPrice{
     width: 27%;  
     float: left;    
     padding: 1.5rem 0 0rem 0;
-    font-size: 0.9rem; 
+    font-size: 0.5rem; 
     font-weight: 400;  
 }
+
 .table__row__total{
     width: 17%; 
     float: left;     
@@ -390,7 +389,18 @@ margin: 0;
     border: none;
     pointer-events: none;
 }
+.table__row{
+    margin-top: 1rem;
+    max-width: 100%;
+    font-size: 1rem; 
+}
+.table__title{
+    font-size: 1rem;
+}
 @media (min-width: 800px){
+    .table__row{
+        font-size: 1rem;
+    }
     .table__row__logo{
         width: 25%;
         float: left;
